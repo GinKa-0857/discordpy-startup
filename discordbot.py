@@ -19,7 +19,7 @@ async def reply(message):
     reply = f' Hello {message.author.mention}' # 返信メッセージの作成
     await message.channel.send(reply) # 返信メッセージを送信
 
-@Client.event
+@client.event
 # 発言時に実行されるイベントハンドラを定義
 async def on_message(message):
     if client.user in message.mentions: # 話しかけられたかの判定
