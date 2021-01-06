@@ -16,7 +16,7 @@ async def on_command_error(ctx, error):
 @Client.event
 # 返信する非同期関数を定義
 async def reply(message):
-    reply = f'{message.author.mention} 呼んだ？' # 返信メッセージの作成
+    reply = f' Hello {message.author.mention}' # 返信メッセージの作成
     await message.channel.send(reply) # 返信メッセージを送信
 
 # 発言時に実行されるイベントハンドラを定義
