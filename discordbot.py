@@ -2,18 +2,18 @@ from discord.ext import commands
 import os
 import traceback
 
-bot = commands.Bot(command_prefix='l!')
+Client = commands.Client(command_prefix='l!')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
-@bot.event
+@Client.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
 
-@bot.event
+@Client.event
 # 返信する非同期関数を定義
 async def reply(message):
     reply = f' Hello {message.author.mention}' # 返信メッセージの作成
@@ -26,4 +26,4 @@ async def on_message(message):
 
 
 
-bot.run(token)
+Client.run(token)
