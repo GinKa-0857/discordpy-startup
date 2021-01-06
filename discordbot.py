@@ -13,7 +13,7 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 
-@Client.event
+@bot.event
 # 返信する非同期関数を定義
 async def reply(message):
     reply = f' Hello {message.author.mention}' # 返信メッセージの作成
