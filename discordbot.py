@@ -1,10 +1,11 @@
 from discord.ext import commands
 import os
 import traceback
-import discord
 
 bot = commands.Bot(command_prefix='l!')
 token = os.environ['DISCORD_BOT_TOKEN']
+
+import discord
 client = discord.Client()
 
 @Client.event
