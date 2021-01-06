@@ -27,4 +27,4 @@ async def on_message(message):
 
 
 
-Client.run(token)
+client.run(token)
