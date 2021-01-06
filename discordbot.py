@@ -1,10 +1,11 @@
 from discord.ext import commands
 import os
 import traceback
+import discord
 
-Client = commands.Client(command_prefix='l!')
+bot = commands.Bor(command_prefix='l!')
 token = os.environ['DISCORD_BOT_TOKEN']
-
+client = discord.Client()
 
 @Client.event
 async def on_command_error(ctx, error):
