@@ -3,7 +3,7 @@ import os
 import traceback
 import discord
 
-bot = commands.Bor(command_prefix='l!')
+bot = commands.Bot(command_prefix='l!')
 token = os.environ['DISCORD_BOT_TOKEN']
 client = discord.Client()
 
