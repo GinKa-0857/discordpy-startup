@@ -1,29 +1,27 @@
+# インストールした discord.py を読み込む
 import discord
-import os
-import traceback
 
-bot = commands.Bot(command_prefix='l!')
-token = os.environ['DISCORD_BOT_TOKEN']
+# 自分のBotのアクセストークンに置き換えてください
+TOKEN = 'Nzk2MDI0MDM2MTE5NDEyNzY2.X_R5Jw.bKkCakVbIQw04i_HO97o0C1LIng'
+
+# 接続に必要なオブジェクトを生成
 client = discord.Client()
 
-@bot.event
-async def on_command_error(ctx, error):
-    orig_error = getattr(error, "original", error)
-    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
-    await ctx.send(error_msg)
-
-
-# 返信する非同期関数を定義
-async def reply(message):
-    reply = f' Hello {message.author.mention}' # 返信メッセージの作成
-    await message.channel.send(reply) # 返信メッセージを送信
-
+# 起動時に動作する処理
 @client.event
-# 発言時に実行されるイベントハンドラを定義
+async def on_ready():
+    # 起動したらターミナルにログイン通知が表示される
+    print('ハロー。観測儀ラプラス、起動しました。')
+
+# メッセージ受信時に動作する処理
+@client.event
 async def on_message(message):
-    if client.user in message.mentions: # 話しかけられたかの判定
-        await reply(message) # 返信する非同期関数を実行
+    # メッセージ送信者がBotだった場合は無視する
+    if message.author.bot:
+        return
+    # 「/neko」と発言したら「にゃーん」が返る処理
+    if message.content == '/neko':
+        await message.channel.send('にゃーん')
 
-
-
-client.run(token)
+# Botの起動とDiscordサーバーへの接続
+client.run(TOKEN)
