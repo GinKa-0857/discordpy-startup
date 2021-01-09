@@ -9,8 +9,10 @@ client = discord.Client()
 # 起動時に動作する処理
 @client.event
 async def on_ready():
-    # 起動したらターミナルにログイン通知が表示される
+CHANNEL_ID = 794218353601937461
+    channel = client.get_channel(CHANNEL_ID)
     print('ハロー。観測儀ラプラス、起動しました。')
+    await channel.send('Hello.\nConfiguration code updates have been confirmed.\nRestarting.')
 
 @client.event
 async def on_member_join(member):
