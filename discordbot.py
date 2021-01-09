@@ -22,7 +22,8 @@ async def on_message(message):
     if message.content == '/neko':
         await message.channel.send('にゃーん')
 
-    if  message.content in 
+    if  'Laplace' in message.content:
+        await message.channel.send('Hello .Org member. What do you need?')
 
 
 # Botの起動とDiscordサーバーへの接続
