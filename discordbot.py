@@ -14,7 +14,7 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-    message.channel.send(f'{message.}'s join has been confirmed.
+    message.channel.send(f'{message.author.display_name}'s join has been confirmed.
 Welcome to the Discord Crisis Countermeasures Organization.
 
 # メッセージ受信時に動作する処理
