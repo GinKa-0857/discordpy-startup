@@ -23,7 +23,7 @@ async def on_message(message):
         await message.channel.send('にゃーん')
 
     if  'Laplace' in message.content:
-        await message.channel.send('Hello .Org member.\nWhat do you need?')
+        await message.channel.send(f'Hello,{display_name}.\nWhat do you need?')
 
 
 # Botの起動とDiscordサーバーへの接続
