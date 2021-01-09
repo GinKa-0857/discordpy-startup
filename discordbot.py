@@ -1,5 +1,5 @@
-# インストールした discord.py を読み込む
 import discord
+import os
 
 TOKEN = os.environ['DISCORD_BOT_TOKEN']
 
