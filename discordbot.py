@@ -22,5 +22,8 @@ async def on_message(message):
     if message.content == '/neko':
         await message.channel.send('にゃーん')
 
+    if  message.content in 
+
+
 # Botの起動とDiscordサーバーへの接続
 client.run(TOKEN)
