@@ -12,6 +12,11 @@ async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
     print('ハロー。観測儀ラプラス、起動しました。')
 
+@client.event
+async def on_member_join(member):
+    message.channel.send(f'{message.}'s join has been confirmed.
+Welcome to the Discord Crisis Countermeasures Organization.
+
 # メッセージ受信時に動作する処理
 @client.event
 async def on_message(message):
