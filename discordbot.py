@@ -9,7 +9,7 @@ client = discord.Client()
 # 起動時に動作する処理
 @client.event
 async def on_ready():
-CHANNEL_ID = 794218353601937461
+    CHANNEL_ID = 794218353601937461
     channel = client.get_channel(CHANNEL_ID)
     print('ハロー。観測儀ラプラス、起動しました。')
     await channel.send('Hello.\nConfiguration code updates have been confirmed.\nRestarting.')
