@@ -33,7 +33,7 @@ async def on_message(message):
     if message.author.bot:
         return
 
-    if message.guild is None and 'Apply' or 'apply' in message.content:
+    if message.guild is None and ('Apply' in message.content or 'apply' in message.content):
         await message.author.send('Ok.')
 
 
