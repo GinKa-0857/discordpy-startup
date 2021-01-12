@@ -27,6 +27,14 @@ async def on_message(message):
     if  'Laplace' in message.content:
         await message.channel.send(f'Hello,{message.author.display_name}.\nWhat do you need?')
 
+#オペレーター申請システム
+@client.event
+async def on_message(message):
+    if message.guild is None:
+    if 'Apply' in message.content
+        await message.author.send('Ok.')
+
+
 
 # Botの起動とDiscordサーバーへの接続
 client.run(TOKEN)
