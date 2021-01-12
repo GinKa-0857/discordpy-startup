@@ -34,7 +34,7 @@ async def on_message(message):
         return
 
     if message.guild is None and ('Apply' in message.content or 'apply' in message.content):
-        await message.author.send('Ok.')
+        await message.author.send('Ok.\nYour operator application has been confirmed.\nPlease set up a code name in order to register it in the database.')
 
 
 
