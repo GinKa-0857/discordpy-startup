@@ -30,7 +30,7 @@ async def on_message(message):
 #オペレーター申請システム
 @client.event
 async def on_message(message):
-    if message.guild is None and 'Apply' in message.content:
+    if message.guild is None and 'Apply' or 'apply' in message.content:
         await message.author.send('Ok.')
 
 
