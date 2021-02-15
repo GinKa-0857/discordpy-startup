@@ -1,3 +1,4 @@
+from discord.ext import commands
 import discord
 import os
 
@@ -35,6 +36,14 @@ async def on_message(message):
 
     if message.guild is None and ('Apply' in message.content or 'apply' in message.content):
         await message.author.send('Ok.\nYour operator application has been confirmed.\nPlease set up a code name in order to register it in the database.')
+
+@commands.has_permissions(administrator=True)
+    async def ban(self, ctx, user_id=None, reason=None):
+        """Ban(管理者用)"""
+        print(user_id)
+        if user_id == None or user_id == ctx.author.id:
+            await ctx.channel.send("BAN対象が正しくありません")
+            return
 
 
 
